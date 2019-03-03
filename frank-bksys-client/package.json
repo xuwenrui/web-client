@@ -1,0 +1,70 @@
+{
+  "name": "frank-bksys-client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "admin-lte": "^2.3.11",
+    "axios": "^0.15.3",
+    "bootstrap": "^3.3.7",
+    "bootstrap3-wysihtml5-bower": "^0.3.3",
+    "chart.js": "^2.5.0",
+    "expose-loader": "^0.7.3",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1",
+    "jquery-slimscroll": "^1.3.8",
+    "jquery-ui": "^1.12.1",
+    "vue": "^2.6.6",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-plugin-unit-mocha": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.1.2",
+    "eslint": "^5.8.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/airbnb"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}
