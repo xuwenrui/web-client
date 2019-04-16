@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+}
+
+.transfer {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 240rpx;
+  background-color: #fff;
+  margin-top: 40rpx;
+  border-bottom: 1rpx solid #DDDDDD;
+  padding-left: 30rpx;
+}
+
+.transfer .input-row{
+   border-top: 1rpx solid #DDDDDD;
+}
+
+.transfer > view {
+  flex: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-size: 34rpx;
+}
+
+.transfer > view:first-child {
+  /* border-bottom: 1rpx solid #DDDDDD; */
+}
+
+.transfer > view > view {
+  display: flex;
+  align-items: center;
+}
+
+.transfer > view > view:last-child {
+  flex: 1;
+  padding-left: 30rpx;
+}
+
+.confirm{
+  padding: 0rpx 30rpx;
+  margin-top: 72rpx;
+}
+
+.confirm > button {
+  background-color: #538CF5;
+  border-radius: 10rpx;
+}
+
+.des {
+  padding: 30rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: rgba(0, 0, 0, 0.45);
+}

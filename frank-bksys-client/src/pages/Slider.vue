@@ -47,7 +47,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import VASlideItem from '../components/VASlideItem'
+import VASlideItem from '../components/VASlideItem.vue'
 
 export default {
   name: 'va-slider',

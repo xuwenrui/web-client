@@ -1,0 +1,35 @@
+<!-- 小程序收藏组件，更多高级用法请参考文档：https://docs.alipay.com/mini/component/component-favorite -->
+<favorite>收藏小程序，下次使用更方便</favorite>
+
+<view class="container">
+  <notice a:if="{{showNotice}}" mode="link" onClick="linkClick">您收到一条新消息</notice>
+  <form onSubmit="handleSubmit">
+    <view class="transfer">
+      <view class="input-row">
+        <view>税前金额</view>
+        <view>
+          <input type="number" name="preTaxAmount" placeholder="输入税前金额" />
+        </view>
+      </view>
+      <view class="input-row">
+        <view>五险一金</view>
+        <view>
+          <input type="number" name="welfareAmount" placeholder="输入五险一金比例或金额" />
+        </view>
+      </view>
+      <view class="input-row">
+        <view>抵扣金额</view>
+        <view>
+          <input type="number" name="remissionAmount" placeholder="输入个税抵扣金额" />
+        </view>
+      </view>
+    </view>
+    <view class="confirm">
+      <button type="primary" formType="submit" onTap="{{handleSubmit}}" loading="{{loading}}"> 计算 </button>
+    </view>
+  </form>
+  <view class="des">
+    <view>说明：</view>
+    <view>1、改工具是类计算器工具，并不会记录个人信息。</view>
+  </view>
+</view>
