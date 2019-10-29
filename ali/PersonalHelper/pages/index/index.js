@@ -8,7 +8,8 @@ Page({
       return;
     }
   },
-
+  calculateTax(){},
+  buildResultDetail(){},
   // 表单验证
   verificationForm(e) {
     let data = e.detail.value;
@@ -27,15 +28,6 @@ Page({
       return false;
     }
   },
-
-
-
-
-
-
-
-
-
 
   onReady() {
     // 页面加载完成

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mybatis SQL格式化</title>
+  </head>
+
+  <body>
+    <div class="left">
+      要格式化的SQL：<br />
+      <textarea id="format-sql" cols="100" rows="8"> </textarea>
+    </div>
+    <div class="right">
+      参数：<br />
+      <textarea id="params" cols="100" rows="8"> </textarea>
+    </div>
+    <div>
+      结果：<br />
+      <textarea id="result" cols="100" rows="8"> </textarea>
+      <br />
+      <button onclick="formatSql();">格式化</button>
+    </div>
+
+    <script>
+      function formatSql() {
+        let toFormatSql = document.getElementById("format-sql").value;
+        let params = document.getElementById("params").value;
+        console.log(params);
+        let paramsArr = params.trim().split(",");
+        paramsArr.forEach(e => {
+          toFormatSql = repeatTag(toFormatSql, e.trim());
+        });
+        document.getElementById("result").value = toFormatSql.trim();
+      }
+      function repeatTag(sql, p) {
+        if (p.indexOf("(String)") > -1) {
+          p = p.replace("(String)", "");
+          return sql.replace("?", "'" + p + "'");
+        } if (p.indexOf("(Long)") > -1) {
+          p = p.replace("(Long)", "");
+          return sql.replace("?", p);
+        } else {
+          p = p.replace("(Integer)", "");
+          return sql.replace("?", p);
+        }
+      }
+    </script>
+  </body>
+</html>

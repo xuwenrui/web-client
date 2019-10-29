@@ -32,4 +32,5 @@
     <view>说明：</view>
     <view>1、改工具是类计算器工具，并不会记录个人信息。</view>
   </view>
+  <view class="result-detail"></view>
 </view>
